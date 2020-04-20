@@ -1,0 +1,60 @@
+.container {
+    margin: 50px 0;
+}
+.cardMain{
+    padding: 35px 35px 10px 35px !important;
+    text-align: center;
+}
+.card {
+    margin: 0 2% !important;
+    position: relative;
+    box-shadow: 0px 0px 12px -3px rgba(0,0,0,0.5);
+}
+
+.mainHeading {
+    background: #7f7fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white !important;
+    padding: 6px 24px;
+
+}
+.covidCounter{
+    font-weight: bolder;
+}
+.infected .mainHeading {
+    background: #7f7fff;
+}
+.recoveries .mainHeading {
+    background: #90ee90;
+}
+.deaths .mainHeading {
+    background: rgba(255,0,0,0.5);
+}
+
+
+.infected {
+    border-bottom: 10px solid rgba(0,0,255,0.5)
+}
+
+.recoveries {
+    border-bottom: 10px solid  #90ee90;
+}
+
+.deaths {
+    border-bottom: 10px solid rgba(255,0,0,0.5);
+}
+
+@media (max-width: 960px) {
+    .card {
+        max-width: 80% !important;
+        margin: 20px 0!important;
+    }
+}
+
+@media (max-width: 770px) {
+    .card {
+        margin: 2% 0 !important;
+    }
+}
