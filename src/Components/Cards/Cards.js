@@ -8,6 +8,7 @@ export const Cards = (props) => {
     if (!props.data) {
         return 'Loading...'
     }
+    const {data} = props
     return (
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
@@ -17,13 +18,13 @@ export const Cards = (props) => {
                         <Typography variant="h5">
                             <CountUp
                                 start={2}
-                                end={props.data.confirmed.value}
+                                end={data.confirmed.value}
                                 duration={2.5}
                                 separator=","
                                 className={styles.covidCounter}
                             />
                         </Typography>
-                        <Typography color="textSecondary" gutterBottom>{new Date(props.data.lastUpdate).toDateString()}</Typography>
+                        <Typography color="textSecondary" gutterBottom>{new Date(data.lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of active cases of COVID-19</Typography>
                     </CardContent>
                 </Grid>
@@ -33,7 +34,7 @@ export const Cards = (props) => {
                         <Typography variant="h5">
                             <CountUp
                                 start={2}
-                                end={props.data.recovered.value}
+                                end={data.recovered.value}
                                 duration={2.5}
                                 separator=","
                                 className={styles.covidCounter}
@@ -49,13 +50,13 @@ export const Cards = (props) => {
                         <Typography variant="h5">
                             <CountUp
                                 start={2}
-                                end={props.data.deaths.value}
+                                end={data.deaths.value}
                                 duration={2.5}
                                 separator=","
                                 className={styles.covidCounter}
                             />
                         </Typography>
-                        <Typography color="textSecondary" gutterBottom>{new Date(props.data.lastUpdate).toDateString()}</Typography>
+                        <Typography color="textSecondary" gutterBottom>{new Date(data.lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of death cases of COVID-19</Typography>
                     </CardContent>
                 </Grid>

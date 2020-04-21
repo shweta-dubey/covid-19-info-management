@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Cards } from "./Components/index";
+import { Cards } from "./Components/Cards/Cards";
 import * as actions from "./store/actions/index"
 import { connect } from "react-redux"
 import styles from "./App.module.css"
